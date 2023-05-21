@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome To GWSC</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="min-w-full p-5 flex justify-between items-center xl:px-30">
+        <a href="#"><img src="Images/LOGO.png" alt="Logo" class="w-11" /></a>
+        <ul class="navlist hidden lg:flex gap-1 xl:gap-5 font-bold md:text-sm">
+          <li class="hover:scale-110 text-white">
+            <a href="index.html" class="bg-red-400 p-2 rounded">Home</a>
+          </li>
+          <li class="hover:scale-110 hover:text-white">
+            <a href="#" class="hover:bg-red-400 p-2 rounded">Information</a>
+          </li>
+          <li class="hover:scale-110 hover:text-white">
+            <a href="#" class="hover:bg-red-400 p-2 rounded">Pitch Types</a>
+          </li>
+          <li class="hover:scale-110 hover:text-white">
+            <a href="#" class="hover:bg-red-400 p-2 rounded">Reviews</a>
+          </li>
+          <li class="hover:scale-110 hover:text-white">
+            <a href="#" class="hover:bg-red-400 p-2 rounded">Features</a>
+          </li>
+          <li class="hover:scale-110 hover:text-white">
+            <a href="#" class="hover:bg-red-400 p-2 rounded">Local Attractions</a>
+          </li>
+          <li class="hover:scale-110 hover:text-white">
+            <a href="#" class="hover:bg-red-400 p-2 rounded">Contact Us</a>
+          </li>
+          <li class="hover:scale-110 hover:text-white">
+            <a href="#" class="hover:bg-red-400 p-2 rounded">Sign Up</a>
+          </li>
+        </ul>
+        <div class="searchbar lg:flex justify-center items-center gap-1 hidden">
+          <input class="p-2 border rounded" type="search" placeholder="search">
+          <a href="#" >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+            </svg>          
+          </a>  
+        </div>
+        <button class="lg:hidden hover:bg-[rgb(0,0,0,0.1)] rounded" id="toggle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+      </nav>
+      <nav
+        class="mobile-navbar lg:hidden hidden flex flex-col min-w-full justify-center items-center bg-slate-400 absolute z-10 p-10"
+        id="mobile-navbar"
+      >
+        <ul class="gap-5 flex flex-col justify-center items-center">
+          <li class="hover:scale-110 hover:text-white">
+            <a href="#" class="hover:bg-red-400 p-2 rounded text-white font-bold">Home</a>
+          </li>
+          <li class="hover:scale-110 hover:text-white">
+            <a href="#" class="hover:bg-red-400 p-2 rounded text-white justify-center">Information</a>
+          </li>
+          <li class="hover:scale-110 hover:text-white">
+            <a href="#" class="hover:bg-red-400 p-2 rounded text-white justify-center">Pitch Types</a>
+          </li>
+          <li class="hover:scale-110 hover:text-white">
+            <a href="#" class="hover:bg-red-400 p-2 rounded text-white justify-center">Reviews</a>
+          </li>
+          <li class="hover:scale-110 hover:text-white">
+            <a href="#" class="hover:bg-red-400 p-2 rounded text-white justify-center">Features</a>
+          </li>
+          <li class="hover:scale-110 hover:text-white">
+            <a href="#" class="hover:bg-red-400 p-2 rounded text-white justify-center">Local Attractions</a>
+          </li>
+          <li class="hover:scale-110 hover:text-white">
+            <a href="#" class="hover:bg-red-400 p-2 rounded text-white justify-center">Contact Us</a>
+          </li>
+          <li class="hover:scale-110 hover:text-white">
+            <a href="#" class="hover:bg-red-400 p-2 rounded text-white justify-center">Sign Up</a>
+          </li>
+          <div class="searchbar flex justify-center items-center gap-1">
+            <input class="p-2" type="search" placeholder="search">
+            <a href="#" >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+              </svg>          
+            </a>  
+          </div>
+        </ul>
+      </nav>
+
+      <!-- Navbar Script Start -->
+      <script>
+        var myList = document.getElementById("mobile-navbar");
+        var myButton = document.getElementById("toggle");
+
+        // Add an event listener to the button
+        myButton.addEventListener("click", function () {
+          // Toggle the 'active' class on the <ul> element
+          myList.classList.toggle("hidden");
+        });
+      </script>
+      <!-- Navbar Script End -->
+
+   
+      <!-- Section Start -->
+        <section class="max-w-full xl:px-96 p-10">
+          <h2 class="font-bold text-4xl w-full text-center">
+            Contact Us
+          </h2>
+          <div class="Contact Form bg-slate-50 p-10">
+            <form action="contact_action.php" method="post">
+            <div class="Field flex flex-col">
+              <label for="FirstName text-6xl font-bold">First Name:</label>
+              <input type="text" name="ContactFirstName" class="p-1 border">
+            </div>
+            <div class="Field flex flex-col">
+              <label for="LastName text-6xl font-bold">Last Name:</label>
+              <input type="text" name="ContactLastName" class="p-1 border">
+            </div>
+            <div class="Field flex flex-col">
+              <label for="Email text-6xl font-bold">Email:</label>
+              <input type="email" name="ContactEmail" class="p-1 border">
+            </div>
+            <div class="Message flex flex-col">
+              <label for="Email text-6xl font-bold">Message:</label>
+              <textarea name="ContactMessage" id="" rows="10" >
+              </textarea>
+            </div>
+            <br>
+            <button type="submit" class="p-2 bg-green-400 hover:scale-110 text-white rounded-sm transition-all ease-in-out hover:bg-green-400">Submit</button>
+            <div class="flex gap-2 py-10">
+              <div class="text-gray-400">Privacy Policy:
+                <br>
+                For information about how we handle your personal data, please read our 
+                <a href="#" class="font-bold">
+                Privacy Policy
+              </a>
+              </div>
+            </div>  
+            </div>
+            </form>
+          </div>
+        </section>
+      <!-- Section End -->
+
+
+    </header>
+    <!--Footer Start-->
+    <hr>
+    <footer class="md:grid flex flex-col gap-6 md:grid-cols-5 lg:min-w-full  md:px-10 lg:px-32 py-10">
+      
+      <div class="logo flex w-full justify-center  lg:w-1/2">
+        <a href="#">
+          <img src="Images/LOGO.png" alt="Logo" class="w-40" />
+        </a>
+      </div>
+
+      <div
+        class="Useful-Links flex flex-col col-span-1 items-center justify-start"
+      >
+        <div class="">
+          <h2 class="font-semibold">Useful Links</h2>
+        </div>
+
+        <div>
+          <ul class="flex flex-col justify-center items-center">
+            <li>
+              <a href="#" class="hover:underline underline-offset-2"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:underline underline-offset-2"
+                >Terms of Service</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:underline underline-offset-2">FAQs</a>
+            </li>
+            <li>
+              <a href="#" class="hover:underline underline-offset-2"
+                >About Us</a
+              >
+            </li>
+
+            <li>
+              <a href="#" class="hover:underline underline-offset-2">Blog</a>
+            </li>
+
+            <li>
+              <a href="#" class="hover:underline underline-offset-2">Careers</a>
+            </li>
+
+            <li>
+              <a href="#" class="hover:underline underline-offset-2"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="Useful-Links flex flex-col col-span-1 items-center justify-start"
+      >
+        <div class="">
+          <h2 class="font-semibold">Sitemap</h2>
+        </div>
+        <ul class="flex flex-col justify-center items-center">
+          <li>
+            <a href="#" class="hover:underline underline-offset-2"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:underline underline-offset-2"
+              >Information</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:underline underline-offset-2"
+              >Pitch Types</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:underline underline-offset-2"
+              >Reviews</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:underline underline-offset-2"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:underline underline-offset-2"
+              >Local Attractions</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:underline underline-offset-2"
+              >Contact Us</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:underline underline-offset-2"
+              >Sign In</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:underline underline-offset-2"
+              >Sign Up</a
+            >
+          </li>
+      </div>
+      <div
+        class="Useful-Links flex flex-col items-center justify-start col-span-1"
+      >
+        <div class="">
+          <h2 class="font-semibold">Our Apps</h2>
+        </div>
+        <div class="w-1/2">
+          <ul class="flex flex-col justify-center items-center gap-1 ">
+            <li>
+              <a href="#"
+                ><img
+                  src="Images/Get-it-on-apple-store-400x118-76240649_qGr5AY-zv.png"
+                  alt=""
+                  class="w-full hover:scale-110 transition-all ease-in-out "
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="Images/get-it-on-google-play-badge-4168770264_Xhu080KTY.png"
+                  alt=""
+                  class="w-full hover:scale-110 transition-all ease-in-out "
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="Useful-Links flex flex-col items-center justify-start col-span-1"
+      >
+        <div class="">
+          <h2 class="font-semibold">Visit Us</h2>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5906.901344539087!2d-84.25126337009455!3d33.8087981134004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5a844fa00a2bf%3A0x33403e32402d1c64!2sClarkston%2C%20GA%2030021%2C%20USA!5e0!3m2!1sen!2sqa!4v1684364305838!5m2!1sen!2sqa"
+          style="border: 0"
+          allowfullscreen=""
+          class="w-full"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe>
+      </div>
+    </footer>
+    <!--Footer End-->
+  </body>
+</html>
